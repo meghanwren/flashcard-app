@@ -1,0 +1,17 @@
+body {
+  background-color: lightblue;
+  color: darkslategrey;
+  font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section > h1 {
+  font-size: 5em;
+}
+
+a {
+  color: darkslategrey;
+}
+
+/*footer {
+  align-content: center;
+}*/
