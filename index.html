@@ -22,8 +22,10 @@
 
     <nav class="col-sm-7">
       <ul class="nav navbar-nav">
-        <li><a href="create.html"><i class="fas fa-plus-square"></i>Create Your Own Flashcards</a></li>
-        <li><a href="search.html"><i class="fas fa-search"></i>Search</a></li>
+        <li><a href="create.html"><i class="fas fa-plus-square fa-fw"></i>Create Your Own Flashcards</a></li>
+        <li><form id="tfnewsearch" method="get" action="http://www.google.com">
+          <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+        </form></li>
       </ul>
     </nav>
   </header>
@@ -37,7 +39,7 @@
         <a href="create.html"><img src="flashcards.jpg" alt="Flash Memorize is here to make life easy" title="click to create your own flashcards" 
           class="img-responsive"></a></h1>
           <footer class="container-fluid">
-              <a class="btn btn-info btn-lg" href="create.html" role="button" style="margin-left: 47%">Begin</a>
+              <a class="btn btn-primary btn-lg" href="create.html" role="button" style="margin-left: 47%">Begin</a>
           </footer>
       </article>
     </section>
