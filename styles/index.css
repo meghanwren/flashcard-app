@@ -4,12 +4,22 @@ body {
   font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
 }
 
+header {
+  background: url(blank\ notebook.jpg);
+  background-size: contain;
+  background-repeat: space;
+}
+
 section > h1 {
   font-size: 5em;
 }
 
 a {
   color: darkslategrey;
+}
+
+h1.col-sm-5 {
+  font-family:'Pacifico', cursive;
 }
 
 /*footer {
