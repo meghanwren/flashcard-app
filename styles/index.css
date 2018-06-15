@@ -4,10 +4,20 @@ body {
   font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.btn {
+  background: -webkit-gradient(linear, left top, left bottom, from(lightblue), to(darkslategrey));
+}
+
+.btn:hover {
+  background: darkslategray;
+}
+
 header {
-  background: url(blank\ notebook.jpg);
-  background-size: contain;
-  background-repeat: space;
+  background: url(paper.jpg);
+}
+
+body > footer {
+  background: url(paper.jpg);
 }
 
 section > h1 {
@@ -18,7 +28,7 @@ a {
   color: darkslategrey;
 }
 
-h1.col-sm-5 {
+#pretty-font {
   font-family:'Pacifico', cursive;
 }
 
@@ -54,15 +64,15 @@ h1.col-sm-5 {
   color: #ffffff;
   border: solid 1px #0076a3; border-right:0px;
   background: #0095cd;
-  background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+  background: -webkit-gradient(linear, left top, left bottom, from(lightblue), to(darkslategrey));
   background: -moz-linear-gradient(top,  #00adee,  #0078a5);
   border-top-right-radius: 5px 5px;
   border-bottom-right-radius: 5px 5px;
 }
 .tfbutton:hover {
   text-decoration: none;
-  background: #007ead;
-  background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+  background: darkslategray;
+  background: -webkit-gradient(linear, left top, left bottom, from(darkslategray), to(darkslategray));
   background: -moz-linear-gradient(top,  #0095cc,  #00678e);
 }
 /* Fixes submit button height problem in Firefox */
@@ -72,3 +82,5 @@ h1.col-sm-5 {
 .tfclear{
   clear:both;
 }
+
+
