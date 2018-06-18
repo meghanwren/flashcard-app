@@ -32,10 +32,6 @@ a {
   font-family:'Pacifico', cursive;
 }
 
-/*footer {
-  align-content: center;
-}*/
-
 #tfheader{
   background-color:#c3dfef;
 }
@@ -75,12 +71,81 @@ a {
   background: -webkit-gradient(linear, left top, left bottom, from(darkslategray), to(darkslategray));
   background: -moz-linear-gradient(top,  #0095cc,  #00678e);
 }
-/* Fixes submit button height problem in Firefox */
+
 .tfbutton::-moz-focus-inner {
   border: 0;
 }
 .tfclear{
   clear:both;
+}
+
+.icon-bar {
+  width: 100%; /* Full-width */
+  background-color: #555; /* Dark-grey background */
+  overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar a {
+  float: left; /* Float links side by side */
+  text-align: center; /* Center-align text */
+  width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+  padding: 12px 0; /* Some top and bottom padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  font-size: 36px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+  background-color: #000; /* Add a hover color */
+}
+
+.active {
+  background-color: #4CAF50; /* Add an active/current color */
+}
+
+.flip-container {
+	perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+	.flip-container:hover .back {
+		transform: rotateY(0deg);
+	}
+	.flip-container:hover .front {
+	    transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 320px;
+  height: 300px;
+}
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+	z-index: 2;
+  transform: rotateY(0deg);
+  background: palegreen;
+}
+
+.back {
+  transform: rotateY(-180deg);
+  background: #4CAF50;
 }
 
 

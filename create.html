@@ -14,6 +14,28 @@
     integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/index.css">
 
+    <!--<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="src/flip.js"></script>
+    <script>
+    $("#card").flip({
+      axis: "y",
+      reverse: false,
+      trigger: "click",
+      speed: 500,
+      forceHeight: false,
+      forceWidth: false,
+      autoSize: true,
+
+      // The selector that flip will use to find the front face of the flippable content. 
+      // [selector], auto, or autostrict
+      front: 'auto',
+
+      // The selector that flip will use to find the back face of the flippable content.
+      // [selector], auto, or autostrict
+      back: 'auto',
+    });
+    </script> -->
+
     <title>Flash Memorize</title>
   </head>
 
@@ -22,23 +44,25 @@
     <h1 class="col-sm-6" id = "pretty-font"><a href="index.html">Flash Memorize</a></h1>
 
     <nav class="col-sm-6">
-      <ul class="nav navbar-nav">
-        <li><a href="create.html"><i class="fas fa-plus-square fa-fw"></i>Create Your Own Flashcards</a></li>
-        <li><form id="tfnewsearch" method="get" action="http://www.google.com">
+        <form id="tfnewsearch" method="get" action="http://www.google.com">
           <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
-        </form></li>
-        <li><a href="sign-up.html">Sign Up</a></li>
-        <li><a href="log-in.html">Log In</a></li>
-      </ul>
+        </form>
     </nav>
+    <div class="icon-bar">
+        <a href="index.html"><i class="fa fa-home"></i></a> 
+        <a class="active" href="create.html"><i class="fas fa-plus-square fa-fw"></i></a>
+        <a href="actual-flashcard.html"><i class="fas fa-sticky-note"></i></a>
+        <a href="contact-us.html"><i class="fa fa-envelope"></i></a> 
+        <a href="careers.html"><i class="fas fa-briefcase"></i></a> 
+      </div>
   </header>
 
   <main class="row">
     <h2>Create your flashcards!</h2>
     <section>
       <form action="" class="col-sm-6">
-        <label for="">Class Name</label>
-        <input type="text" id="name" name="class-name" class="form-control">
+        <label for="">Name Stack</label>
+        <input type="text" id="class-name" name="class-name" class="form-control">
         <label for="">Front Of Card</label>
         <textarea name="front-of-card" id="front-of-card" cols="30" rows="10" class="form-control"></textarea>
         <label for="">Back Of Card</label>
@@ -48,20 +72,28 @@
         <button type="reset">clear information</button>
       </form>
     </section>
+
+    
+    
+  
+    
+
   </main>
 
     <footer class="row">
-        <nav class="col-sm-7 col-sm-offset-5">
-          <ul class="nav navbar-nav">
-          <li><a href="contact-us.html">Contact Us</a></li>
-          <li><a href="careers.html">Careers</a></li>
-          </ul>
-        </nav>
+        <!-- <nav class="col-sm-7 col-sm-offset-5">
+        <ul class="nav navbar-nav">
+        <li><a href="contact-us.html">Contact Us</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </nav>-->
           <small class="col-sm-12 text-center">
               copyright &copy; 2018 meghan wren, all rights reserved
           </small>
         
       </footer>
+<script src="scripts/create-pre-filled.js"></script>
+<script src="scripts/app.js"></script>
 
 </body>
 
