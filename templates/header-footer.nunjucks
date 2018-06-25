@@ -1,3 +1,4 @@
+{% block header %}
 <!DOCTYPE html>
 
 <html lang="en">
@@ -9,9 +10,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" 
     integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="shortcut icon" href="flashcards.jpg" />
     <link rel="stylesheet" href="index.css">
 
     <title>Flash Memorize</title>
@@ -26,40 +28,43 @@
           <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
         </form>
     </nav>
+    {% block nav %}
     <div class="icon-bar">
-        <a href="index.html"><i class="fa fa-home"></i></a> 
-        <a href="create.html"><i class="fas fa-plus-square fa-fw"></i></a>
+        <a class="active.nunjucks" href="header-footer"><i class="fa fa-home"></i></a> 
+        <a href="create.nunjucks"><i class="fas fa-plus-square fa-fw"></i></a>
         <a href="actual-flashcard.html"><i class="fas fa-sticky-note"></i></a>
-        <a class="active" href="contact-us.html"><i class="fa fa-envelope"></i></a> 
-        <a href="careers.html"><i class="fas fa-briefcase"></i></a> 
+        <a href="contact-us.nunjucks"><i class="fa fa-envelope"></i></a> 
+        <a href="careers.nunjucks"><i class="fas fa-briefcase"></i></a> 
       </div>
+    {% endblock %}
   </header>
+  {% endblock %}
 
-  <main class="row">
-    <h2>Contact Us</h2>
-      <form action="" class="col-sm-6">
-        <label for="">Name</label>
-        <input type="text" id="name" name="name" class="form-control">
-        <label for="">Email</label>
-        <input type="text" id="email" name="email" class="form-control">
-        <label for="">Phone</label>
-        <input type="text" id="phone" name="phone" class="form-control">
-        <label for="">Comment or concern description</label>
-        <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
-
-        <button type="submit">submit</button>
-        <button type="reset">clear information</button>
-      </form>
-
+  {% block main %}
+   <main>
+    <section class="row">
+      <article>
+        <h1 class="col-sm-6 text-center"><b>Don't waste time <em>STRESSING</em></b>
+        <img src="studying.jpg" alt="Studying doesn't have to be stressful" title="studying doesn't have to be stressful" class="img-responsive"></h1>
+        <h1 class="col-sm-6 text-center"><b>Memorize in a <em>FLASH</em></b>
+        <a href="create.html"><img src="flashcards.jpg" alt="Flash Memorize is here to make life easy" title="click to create your own flashcards" 
+          class="img-responsive"></a></h1>
+          <footer class="container-fluid">
+              <a class="btn btn-primary btn-lg" href="create.nunjucks" role="button" style="margin-left: 47%">Begin</a>
+          </footer>
+      </article>
+    </section>
   </main>
+  {% endblock %}
 
+  {% block footer %}
   <footer class="row">
       <small class="col-sm-12 text-center">
           copyright &copy; 2018 meghan wren, all rights reserved
       </small>
     
   </footer>
-  <script src="contact-us-pre-filled.js"></script>
-  <script src="app.js"></script>
 </body>
+
 </html>
+{% endblock %}

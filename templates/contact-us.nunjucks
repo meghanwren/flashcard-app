@@ -1,0 +1,30 @@
+{% extends header-footer.nunjucks %}
+
+{% block nav %}
+<div class="icon-bar">
+        <a href="header-footer.nunjucks"><i class="fa fa-home"></i></a> 
+        <a href="create.nunjucks"><i class="fas fa-plus-square fa-fw"></i></a>
+        <a href="actual-flashcard.html"><i class="fas fa-sticky-note"></i></a>
+        <a class="active" href="contact-us.nunjucks"><i class="fa fa-envelope"></i></a> 
+        <a href="careers.nunjucks"><i class="fas fa-briefcase"></i></a> 
+      </div>
+{% endblock %}
+
+{% block main %}
+<main class="row">
+    <h2>Contact Us</h2>
+      <form action="" class="col-sm-6">
+        <label for="">Name</label>
+        <input type="text" id="name" name="name" class="form-control">
+        <label for="">Email</label>
+        <input type="text" id="email" name="email" class="form-control">
+        <label for="">Phone</label>
+        <input type="text" id="phone" name="phone" class="form-control">
+        <label for="">Comment or concern description</label>
+        <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
+
+        <button type="submit">submit</button>
+        <button type="reset">clear information</button>
+      </form>
+  </main>
+{% endblock %}
