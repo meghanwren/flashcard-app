@@ -4,7 +4,7 @@
 <div class="icon-bar">
         <a href="header-footer.nunjucks"><i class="fa fa-home"></i></a> 
         <a class="active" href="create.nunjucks"><i class="fas fa-plus-square fa-fw"></i></a>
-        <a href="actual-flashcard.html"><i class="fas fa-sticky-note"></i></a>
+        <a href="note.nunjucks"><i class="fas fa-sticky-note"></i></a>
         <a href="contact-us.nunjucks"><i class="fa fa-envelope"></i></a> 
         <a href="careers.nunjucks"><i class="fas fa-briefcase"></i></a> 
       </div>

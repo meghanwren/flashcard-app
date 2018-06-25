@@ -1,0 +1,17 @@
+{% extends header-footer.nunjucks %}
+
+{% block nav %}
+<div class="icon-bar">
+        <a href="header-footer.nunjucks"><i class="fa fa-home"></i></a> 
+        <a href="create.nunjucks"><i class="fas fa-plus-square fa-fw"></i></a>
+        <a class="active" href="note.nunjucks"><i class="fas fa-sticky-note"></i></a>
+        <a href="contact-us.nunjucks"><i class="fa fa-envelope"></i></a> 
+        <a href="careers.nunjucks"><i class="fas fa-briefcase"></i></a> 
+      </div>
+{% endblock %}
+
+{% block main %}
+<h1 class="text-center">Note from all of us at</h1>
+<h1 class="col-sm-6" id = "pretty-font"><a href="index.html">Flash Memorize</a></h1>
+<p>"Just believe in yourself. Even if you don't, pretend that you do and, at some point, you will." -Venus Williams</p>
+{% endblock %}
