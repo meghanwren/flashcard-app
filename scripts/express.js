@@ -15,10 +15,10 @@ nunjucks.configure('templates', {
 })
 
 app.set('view engine', 'nunjucks');
-// app.use(bodyparser.json());
-// app.use(bodyparser.urlencoded({ //parser reads data and turns it into objects
-//   extended: false
-// }));
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({ //parser reads data and turns it into objects
+  extended: false
+}));
 
 app.get('/', (req, res) => {
   res.render(path.join(__dirname, '../templates/header-footer.nunjucks'));

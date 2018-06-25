@@ -21,6 +21,7 @@
   "dependencies": {
     "express": "^4.16.3",
     "express-nunjucks": "^2.2.3",
+    "mongodb": "^3.0.10",
     "nunjucks": "^3.1.3"
   }
 }
