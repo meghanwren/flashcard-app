@@ -24,23 +24,23 @@ app.get('/', (req, res) => {
   res.render(path.join(__dirname, '../templates/header-footer.nunjucks'));
 });
 
-app.get('/header-footer.nunjucks', (req, res) => {
+app.get('/header-footer', (req, res) => {
   res.render(path.join(__dirname, '../templates/header-footer.nunjucks'));
 });
 
-app.get('/contact-us.nunjucks', (req, res) => {
+app.get('/contact-us', (req, res) => {
   res.render(path.join(__dirname, '../templates/contact-us.nunjucks'));
 });
 
-// app.get('/actual-flashcard.', (req, res) => {
-//   res.sendFile(path.join(__dirname, '../actual-flashcard.html'));
-// });
+app.get('/note', (req, res) => {
+  res.sendFile(path.join(__dirname, '../templates/note.nunjucks'));
+});
 
-app.get('/careers.nunjucks', (req, res) => {
+app.get('/careers', (req, res) => {
   res.render(path.join(__dirname, '../templates/careers.nunjucks'));
 });
 
-app.get('/create.nunjucks', (req, res) => {
+app.get("/create", (req, res) => {
   res.render(path.join(__dirname, '../templates/create.nunjucks'));
 });
 

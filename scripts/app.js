@@ -48,13 +48,21 @@
   });
 
   nextButton.addEventListener('click', (evt) => {
-  ++currentIndex;
-  Display(cards[currentIndex].classname, cards[currentIndex].front, cards[currentIndex].back);
+  if (currentIndex + 1 < cards.length) {
+     ++currentIndex;
+      Display(cards[currentIndex].classname, cards[currentIndex].front, cards[currentIndex].back);
+    } else {
+      alert("You're already at the end of your deck");
+    }
   });
 
   backButton.addEventListener('click', (evt) => {
+    if (currentIndex > 0) {
     --currentIndex;
     Display(cards[currentIndex].classname, cards[currentIndex].front, cards[currentIndex].back);
+    } else {
+      alert("You're at the beginning of your deck");
+    }
     });
 
 }());

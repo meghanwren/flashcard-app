@@ -31,7 +31,7 @@
     {% block nav %}
     <div class="icon-bar">
         <a class="active.nunjucks" href="header-footer"><i class="fa fa-home"></i></a> 
-        <a href="create.nunjucks"><i class="fas fa-plus-square fa-fw"></i></a>
+        <a href="create"><i class="fas fa-plus-square fa-fw"></i></a>
         <a href="note.nunjucks"><i class="fas fa-sticky-note"></i></a>
         <a href="contact-us.nunjucks"><i class="fa fa-envelope"></i></a> 
         <a href="careers.nunjucks"><i class="fas fa-briefcase"></i></a> 
@@ -47,7 +47,7 @@
         <h1 class="col-sm-6 text-center"><b>Don't waste time <em>STRESSING</em></b>
         <img src="studying.jpg" alt="Studying doesn't have to be stressful" title="studying doesn't have to be stressful" class="img-responsive"></h1>
         <h1 class="col-sm-6 text-center"><b>Memorize in a <em>FLASH</em></b>
-        <a href="create.html"><img src="flashcards.jpg" alt="Flash Memorize is here to make life easy" title="click to create your own flashcards" 
+        <a href="create.nunjucks"><img src="flashcards.jpg" alt="Flash Memorize is here to make life easy" title="click to create your own flashcards" 
           class="img-responsive"></a></h1>
           <footer class="container-fluid">
               <a class="btn btn-primary btn-lg" href="create.nunjucks" role="button" style="margin-left: 47%">Begin</a>
