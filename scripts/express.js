@@ -60,6 +60,13 @@ mongoClient.connect('mongodb://localhost:27017/', (err, client) => {
           });
         });
       });
+
+      app.route('/delete') 
+      .get((req, res) => {
+        cards.deleteMany({}, (err, res3) => {
+          res.render('stack');
+        });
+      });
     
     app.route('/stack')
       .get((req, res) => {
