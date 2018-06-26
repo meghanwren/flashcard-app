@@ -1,3 +1,1 @@
-//require('./scripts/express.js');
-
-require('./scripts/mongodb');
+require('./scripts/express.js');

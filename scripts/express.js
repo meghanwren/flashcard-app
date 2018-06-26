@@ -1,47 +1,71 @@
-var express = require('express');
-var path = require('path');
-var nunjucks = require('nunjucks');
-const expressNunjucks = require('express-nunjucks');
-var bodyparser = require('body-parser');
-
+const bodyParser = require('body-parser');
+var Card = require('../scripts/cards.js');
+const express = require('express');
+const mongodb = require('mongodb');
+const nunjucks = require('nunjucks');
 const app = express();
-
-app.use(express.static('scripts'));
-app.use(express.static('styles'));
+const mongoClient = mongodb.MongoClient;
 
 nunjucks.configure('templates', {
-  autoescape: true, //autocompletes html tags
+  autoescape: true,
   express: app
-})
+});
+
+app.listen(9000);
 
 app.set('view engine', 'nunjucks');
-app.use(bodyparser.json());
-app.use(bodyparser.urlencoded({ //parser reads data and turns it into objects
-  extended: false
-}));
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.static('scripts'));
+app.use(express.static('./styles'));
 
-app.get('/', (req, res) => {
-  res.render(path.join(__dirname, '../templates/header-footer.nunjucks'));
+mongoClient.connect('mongodb://localhost:27017/', (err, client) => {
+  if (err) {
+    console.error(err);
+    client.close();
+  } else {
+    let db = client.db('flashcards');
+    let cards = db.collection('cards');
+
+    app.route('/')
+      .get((req, res) => {
+        res.render('headerfooter');
+      });
+
+      app.route('/headerfooter')
+      .get((req, res) => {
+        res.render('headerfooter');
+      });
+
+    app.route('/contactus')
+      .get((req, res) => {
+        res.render('contactus');
+      });
+
+     app.route('/careers')
+      .get((req, res) => {
+        res.render('careers');
+      });
+
+    app.route('/create')
+      .get((req, res) => {
+        res.render('create');
+      })
+      .post((req, res) => {
+        let c = new Card(req.body);
+        console.log(req.body);
+        cards.insertOne(c, (err, res1) => {
+          cards.find({}).toArray((err, res2) => {
+            
+            res.render('stack', {data: res2});
+          });
+        });
+      });
+    
+    app.route('/stack')
+      .get((req, res) => {
+        cards.find().toArray((err, res2) => {
+          res.render('stack', {data: res2});
+        });
+      });
+  }
 });
-
-app.get('/header-footer', (req, res) => {
-  res.render(path.join(__dirname, '../templates/header-footer.nunjucks'));
-});
-
-app.get('/contact-us', (req, res) => {
-  res.render(path.join(__dirname, '../templates/contact-us.nunjucks'));
-});
-
-app.get('/note', (req, res) => {
-  res.sendFile(path.join(__dirname, '../templates/note.nunjucks'));
-});
-
-app.get('/careers', (req, res) => {
-  res.render(path.join(__dirname, '../templates/careers.nunjucks'));
-});
-
-app.get("/create", (req, res) => {
-  res.render(path.join(__dirname, '../templates/create.nunjucks'));
-});
-
-app.listen(5090);

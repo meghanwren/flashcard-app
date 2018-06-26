@@ -1,0 +1,22 @@
+{% extends "headerfooter.nunjucks" %}
+
+{% block main %}
+<main class="row text-center">
+  <ul class="nav navbar-nav">
+  {% for item in data %}
+  <li>
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+          <div class="front">
+            <h3 class="front-output">{{item.cardFront}}</h3>
+          </div>
+          <div class="back">
+            <h3 class="back-output">{{item.cardBack}}</h3>
+          </div>
+        </div>
+    </div>
+    </li>
+    {% endfor %}
+  </ul>
+  </main>
+{% endblock %}
